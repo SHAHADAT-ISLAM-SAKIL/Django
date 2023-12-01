@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- {{block.super}} -->
+
+<style>
+    .row{
+        padding: 15px;
+    }
+</style>
+
+
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for i in data %}
+    <div class="col">
+      <div class="card h-100">
+        <img src=" {{i.strCategoryThumb}} " class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">ID : {{i.idCategory}}</h5>
+          <h5 class="card-title">{{i.strCategory}}</h5>
+          <p class="card-text">   {{'i.strCategoryDescription' | truncatechars:10}} </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}

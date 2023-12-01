@@ -1,0 +1,33 @@
+.contain-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Set your desired height */
+    border: 1px solid #ccc;
+    padding: 10px;
+  
+}
+.p {
+    font-size: 30px;
+    max-width: 40%; /* Adjust as needed */
+    height: 50%; /* Maintain aspect ratio */
+    
+    /* Add border */
+    border: 2px solid #333; /* Example border style */
+    
+    /* Add rounded corners */
+    border-radius: 8px; /* Adjust border radius as desired */
+  
+    /* Add box shadow */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Example box shadow */
+    
+    /* Add hover effect (optional) */
+    transition: transform 0.3s ease-in-out;
+padding: 20px; }
+
+  
+.img {
+    width: 100%;
+    margin-bottom: 200px;
+
+  }

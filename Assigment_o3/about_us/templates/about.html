@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    /* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.container1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: aquamarine;
+}
+
+/* Header styles */
+.header {
+  background-color: #f8f8f8;
+  padding: 10px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Main section styles */
+.about-section, .team-section, .contact-section {
+  margin-bottom: 40px;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* ...Previous CSS styles... */
+
+/* Animations */
+.about-section p,
+.contact-section p {
+  transition: color 0.3s ease-in-out; /* Adding a color transition */
+}
+
+.team-member img {
+  max-width: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out; /* Adding a transform transition */
+}
+
+/* Hover effects */
+.about-section p:hover,
+.contact-section p:hover {
+  color: #ff7f50; /* Change text color on hover */
+}
+
+.team-member img:hover {
+  transform: scale(1.1); /* Scale up the image on hover */
+}
+
+</style>
+  <header class="header">
+    <nav class="navbar">
+      <div class="container1">
+        <a href="#" class="logo">Gramin Restaurant</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="about-section">
+      <h1>About Us</h1>
+      <p>Welcome to Our Restaurant! Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+
+    </section>
+
+    <section class="team-section">
+      <h2>Meet Our Team</h2>
+      <div class="team-members">
+        <div class="team-member">
+          <img src="../static/image/banner-shape-1 (1) (1).png" alt="Team Member 1">
+          <h3>MD SHAHADAT ISLAM SAKIL</h3>
+          <p>Position: C.E.O.</p>
+          <h3>EMON KHAN</h3>
+          <p>Position: M.D.</p>
+          <h3>TANVIR HOQ</h3>
+          <p>Position: S.R.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+      <p>Email: info@ourrestaurant.com</p>
+      <p>Phone: +1234567890</p>
+      <!-- Add address, social media links, or other contact details -->
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 Our Restaurant. All rights reserved.</p>
+    </div>
+  </footer>
+
+  {% endblock %}
