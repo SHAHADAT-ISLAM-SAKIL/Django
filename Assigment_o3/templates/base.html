@@ -12,32 +12,46 @@
 <body>
     <!-- Navbar  -->
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">My Resturant</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'index' %}">Show Item</a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link " aria-disabled="true" href="{% url 'about' %}">About Us</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm sticky-top" data-aos="fade-down" data-aos-duration="1000">
+  <div class="container-fluid px-5">
+    <a class="navbar-brand" href="#">
+      <span class="h1 mb-0 text-primary font-weight-bold">My Restaurant</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-primary rounded-pill px-3 py-2 shadow-sm" aria-current="page" href="{% url 'home' %}">
+            <i class="fa-solid fa-house me-1"></i> Home
+          </a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link text-secondary rounded-pill px-3 py-2 shadow-sm" href="{% url 'index' %}" >
+            <i class="fa-solid fa-info-circle me-1"></i> Show Items
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-success rounded-pill px-3 py-2 shadow-sm" href="{% url 'about' %}">
+            <i class="fa-solid fa-phone me-1"></i>  About Us
+          </a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2 rounded-pill shadow-sm" type="search" placeholder="Search Items..." aria-label="Search">
+        <button class="btn btn-outline-success rounded-pill px-3 py-2 shadow-sm" type="submit">
+          <i class="fa-solid fa-search">Search</i>
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
+
 
       <!-- End Navbar  -->
       
