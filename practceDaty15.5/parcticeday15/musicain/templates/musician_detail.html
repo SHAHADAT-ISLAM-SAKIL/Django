@@ -1,0 +1,20 @@
+<!-- Displaying details of a musician -->
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<h1>Musician Detail</h1>
+<p>ID: {{ musician.id }}</p>
+<p>Name: {{ musician.first_name }} {{ musician.last_name }}</p>
+<p>Email: {{ musician.email }}</p>
+<p>Phone Number: {{ musician.phone_number }}</p>
+<p>Instrument Type: {{ musician.instrument_type }}</p>
+<!-- Display albums related to this musician -->
+<h2>Albums</h2>
+<ul>
+  {% for album in musician.album_set.all %}
+  <li>{{ album.album_name }} - {{ album.release_date }}</li>
+  {% endfor %}
+</ul>
+{% endblock content %}

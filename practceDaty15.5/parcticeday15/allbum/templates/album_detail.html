@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<!-- Displaying details of an album -->
+<h1>Album Detail:</h1>
+<p>ID: {{ album.id }}</p>
+<p>Name: {{ album.album_name }}</p>
+<p>Musician: {{ album.musician.first_name }} {{ album.musician.last_name }}</p>
+<p>Release Date: {{ album.release_date }}</p>
+<p>Rating: {{ album.rating }}</p>
+{% endblock content %}
