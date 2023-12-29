@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>S_Car</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/mdb-ui-kit@3.0.0-beta.8/css/mdb.min.css" rel="stylesheet">
+
+
+
+    <!-- MDBootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+<style>
+.bg-image {
+  background-size: cover;
+  background-position: center;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+</style>
+
+
+
+  </head>
+  <body class="bg-light bg-gradient" >
+  
+    <nav class="navbar navbar-expand-lg bg-primary bg-body-tertiary   shadow-sm" style="">
+        <div class="container-fluid" style=" text-transform: uppercase;">
+          <a class="navbar-brand fw-bold" href="{% url 'home'%}">S_Car</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+               <li class="nav-item">
+
+                 <a class="nav-link active fw-bold" aria-current="page" href="{% url 'home' %}">Home</a>
+                </li>
+            
+                  {% if user.is_authenticated %}
+                     <li class="nav-item">
+                     <a class="nav-link active fw-bold" aria-current="page" href="{% url  'update'%}"> Profile</a>
+                      </li>
+                      <li class=" navbar-nav nav-item">
+                        <a class="nav-link active fw-bold" aria-current="page" href="{% url 'logout'%}" class="text-decoration-none ">Logout</a>
+                      </li>
+                      <li class=" navbar-nav nav-item">
+                        <a class="nav-link active fw-bold" aria-current="page" 
+                        href="{% url 'detail' %}" class="text-decoration-none ">Cars</a>
+                      </li>
+          
+                   
+            
+            </ul>
+            {% else %}
+             <li class=" navbar-nav nav-item ">
+                <a class="nav-link active fw-bold text-decoration-none " aria-current="page" href="{% url 'register'%}">Signup</a>
+              </li>
+             
+              <li class=" navbar-nav nav-item">
+                <a class="nav-link active fw-bold" aria-current="page" href="{% url 'login'%}" class="text-decoration-none ">Login</a>
+              </li> 
+              <li class=" navbar-nav nav-item">
+                <a class="nav-link active fw-bold" aria-current="page" href="{%url 'about'%}" class="text-decoration-none ">About us</a>
+              </li> 
+              {% endif %}
+          </div>
+        </div>
+      </nav>
+
+    
+{% block content %}
+
+
+
+
+{% endblock  %}
+
+  {% comment %} footer {% endcomment %}
+  <footer class="text-center mt-4">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating btn-lg text-body m-1 "
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="warning "
+          ><i class="fab fa-facebook-f text-black"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter text-black"></i
+        ></a>
+  
+        <!-- Google -->
+        <a
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-google text-black"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram text-black"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-linkedin text-black"></i
+        ></a>
+        <!-- Github -->
+        <a
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-github text-black"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3 fw-bold text-warning" style="/">
+      © 2023 Copyright:
+      <a class="text-body text-decoration-none fw-bold fs-5 " href="">car_sale.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
